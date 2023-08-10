@@ -15,7 +15,6 @@ from .youtube import (  # Youtube is moved to the top to improve performance
     YoutubeSearchURLIE,
     YoutubeMusicSearchURLIE,
     YoutubeSubscriptionsIE,
-    YoutubeStoriesIE,
     YoutubeTruncatedIDIE,
     YoutubeTruncatedURLIE,
     YoutubeYtBeIE,
@@ -215,6 +214,7 @@ from .bild import BildIE
 from .bilibili import (
     BiliBiliIE,
     BiliBiliBangumiIE,
+    BiliBiliBangumiSeasonIE,
     BiliBiliBangumiMediaIE,
     BiliBiliSearchIE,
     BilibiliCategoryIE,
@@ -497,6 +497,7 @@ from .dplay import (
     DiscoveryPlusItalyIE,
     DiscoveryPlusItalyShowIE,
     DiscoveryPlusIndiaShowIE,
+    GlobalCyclingNetworkPlusIE,
 )
 from .dreisat import DreiSatIE
 from .drbonanza import DRBonanzaIE
@@ -1012,6 +1013,7 @@ from .lynda import (
     LyndaCourseIE
 )
 from .m6 import M6IE
+from .magellantv import MagellanTVIE
 from .magentamusik360 import MagentaMusik360IE
 from .mailru import (
     MailRuIE,
@@ -1120,7 +1122,8 @@ from .mojvideo import MojvideoIE
 from .morningstar import MorningstarIE
 from .motherless import (
     MotherlessIE,
-    MotherlessGroupIE
+    MotherlessGroupIE,
+    MotherlessGalleryIE,
 )
 from .motorsport import MotorsportIE
 from .movieclips import MovieClipsIE
@@ -1140,6 +1143,7 @@ from .mtv import (
 )
 from .muenchentv import MuenchenTVIE
 from .murrtube import MurrtubeIE, MurrtubeUserIE
+from .museai import MuseAIIE
 from .musescore import MuseScoreIE
 from .musicdex import (
     MusicdexSongIE,
@@ -1261,6 +1265,7 @@ from .nhk import (
     NhkForSchoolProgramListIE,
     NhkRadioNewsPageIE,
     NhkRadiruIE,
+    NhkRadiruLiveIE,
 )
 from .nhl import NHLIE
 from .nick import (
@@ -1416,7 +1421,7 @@ from .patreon import (
     PatreonIE,
     PatreonCampaignIE
 )
-from .pbs import PBSIE
+from .pbs import PBSIE, PBSKidsIE
 from .pearvideo import PearVideoIE
 from .peekvids import PeekVidsIE, PlayVidsIE
 from .peertube import (
@@ -1529,6 +1534,7 @@ from .prx import (
 )
 from .puls4 import Puls4IE
 from .pyvideo import PyvideoIE
+from .qdance import QDanceIE
 from .qingting import QingTingIE
 from .qqmusic import (
     QQMusicIE,
@@ -1615,6 +1621,7 @@ from .rentv import (
 from .restudy import RestudyIE
 from .reuters import ReutersIE
 from .reverbnation import ReverbNationIE
+from .rheinmaintv import RheinMainTVIE
 from .rice import RICEIE
 from .rmcdecouverte import RMCDecouverteIE
 from .rockstargames import RockstarGamesIE
@@ -1703,6 +1710,7 @@ from .ruv import (
     RuvIE,
     RuvSpilaIE
 )
+from .s4c import S4CIE
 from .safari import (
     SafariIE,
     SafariApiIE,
@@ -1851,6 +1859,10 @@ from .srgssr import (
     SRGSSRPlayIE,
 )
 from .srmediathek import SRMediathekIE
+from .stacommu import (
+    StacommuLiveIE,
+    StacommuVODIE,
+)
 from .stanfordoc import StanfordOpenClassroomIE
 from .startv import StarTVIE
 from .steam import (
@@ -1863,7 +1875,6 @@ from .storyfire import (
     StoryFireSeriesIE,
 )
 from .streamable import StreamableIE
-from .streamanity import StreamanityIE
 from .streamcloud import StreamcloudIE
 from .streamcz import StreamCZIE
 from .streamff import StreamFFIE
@@ -2264,6 +2275,8 @@ from .vk import (
     VKIE,
     VKUserVideosIE,
     VKWallPostIE,
+    VKPlayIE,
+    VKPlayLiveIE,
 )
 from .vocaroo import VocarooIE
 from .vodlocker import VodlockerIE
@@ -2352,6 +2365,7 @@ from .weyyak import WeyyakIE
 from .whyp import WhypIE
 from .wikimedia import WikimediaIE
 from .willow import WillowIE
+from .wimbledon import WimbledonIE
 from .wimtv import WimTVIE
 from .whowatch import WhoWatchIE
 from .wistia import (
@@ -2427,7 +2441,10 @@ from .yandexvideo import (
     ZenYandexChannelIE,
 )
 from .yapfiles import YapFilesIE
-from .yappy import YappyIE
+from .yappy import (
+    YappyIE,
+    YappyProfileIE,
+)
 from .yesjapan import YesJapanIE
 from .yinyuetai import YinYueTaiIE
 from .yle_areena import YleAreenaIE
@@ -2445,7 +2462,10 @@ from .younow import (
 from .youporn import YouPornIE
 from .yourporn import YourPornIE
 from .yourupload import YourUploadIE
-from .zaiko import ZaikoIE
+from .zaiko import (
+    ZaikoIE,
+    ZaikoETicketIE,
+)
 from .zapiks import ZapiksIE
 from .zattoo import (
     BBVTVIE,
