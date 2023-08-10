@@ -141,6 +141,10 @@ class KnownPiracyIE(UnsupportedInfoExtractor):
         r'hentai\.animestigma\.com',
     )
 
+    _TESTS = [{
+        'url': 'http://poooo.me/ee/332523',
+        'only_matching': True,
+    }]
 
     def _real_extract(self, url):
         raise ExtractorError(
