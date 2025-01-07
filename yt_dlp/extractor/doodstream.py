@@ -43,7 +43,9 @@ class DoodStreamIE(InfoExtractor):
     }]
 
     def _real_extract(self, url):
+        
         video_id = self._match_id(url)
+        print(video_id)
         url = f'https://dood.to/e/{video_id}'
         webpage = self._download_webpage(url, video_id)
 
@@ -56,10 +58,10 @@ class DoodStreamIE(InfoExtractor):
             ['og:description', 'description', 'twitter:description'], webpage, default=None)
 
         headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/66.0',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0',
             'referer': url
         }
-
+        print("nigger2")
         pass_md5 = self._html_search_regex(r'(/pass_md5.*?)\'', webpage, 'pass_md5')
         final_url = ''.join((
             self._download_webpage(f'https://dood.to{pass_md5}', video_id, headers=headers),
