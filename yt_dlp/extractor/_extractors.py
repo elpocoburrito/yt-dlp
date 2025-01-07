@@ -1,7 +1,7 @@
 # flake8: noqa: F401
 # isort: off
 
-from doodstream import DoodStreamIE
+from .doodstream import DoodStreamIE
 
 from .youtube import (  # Youtube is moved to the top to improve performance
     YoutubeIE,
