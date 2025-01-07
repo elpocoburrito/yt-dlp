@@ -171,33 +171,15 @@ class KnownPiracyIE(UnsupportedInfoExtractor):
     """
 
     URLS = (
-        r'dood\.(?:to|watch|so|pm|wf|re)',
         # Sites youtube-dl supports, but we won't
-        r'viewsb\.com',
-        r'filemoon\.sx',
-        r'hentai\.animestigma\.com',
-        r'thisav\.com',
-        r'gounlimited\.to',
-        r'highstream\.tv',
-        r'uqload\.com',
-        r'vedbam\.xyz',
-        r'vadbam\.net'
-        r'vidlo\.us',
-        r'wolfstream\.tv',
-        r'xvideosharing\.com',
-        r'(?:\w+\.)?viidshar\.com',
-        r'sxyprn\.com',
-        r'jable\.tv',
-        r'91porn\.com',
-        r'einthusan\.(?:tv|com|ca)',
-        r'yourupload\.com',
+        r'yrupload\.com',
     )
 
     _TESTS = [{
-        'url': 'http://dood.to/e/5s1wmbdacezb',
+        'url': 'http://doogregerd.to/e/5s1wmbdacezb',
         'only_matching': True,
     }, {
-        'url': 'https://thisav.com/en/terms',
+        'url': 'https://thisregregav.com/en/terms',
         'only_matching': True,
     }]
 
